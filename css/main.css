@@ -32,8 +32,8 @@ body {
 
 }
 
-.puzzle-board { 
-	width:600px; 
+.puzzle-board {
+	width:600px;
 	background-image: url('../images/backGround0.jpg');
 	background-repeat: no-repeat;
 }
@@ -57,9 +57,37 @@ body {
 .drop-zone {
 	width: 49.5%;
   height: 49.5%;
-  border: thin dashed white;
+  /* border: thin dashed white; */
   float: left;
 	position: relative;
+}
+
+/* reset the drop zone images */
+.drop-zone img {
+	width: 90% !important;
+	padding: 0;
+	float: none;
+	position: absolute;
+}
+
+.tl img {
+	right: 0;
+	bottom: 0;
+}
+
+.tr img {
+	left: 0;
+	bottom: 0;
+}
+
+.bl img {
+	top: 0;
+	right: 0;
+}
+
+.br img {
+	top: 0;
+	left: 0;
 }
 
 
