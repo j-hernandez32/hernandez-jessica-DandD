@@ -14,10 +14,11 @@
 
 	// THIRD you write your function
 	function changeImgSet() {
+
 		// "this" refers to the element that triggers this function
 		// ie. the nav button we click with the custom data attribute of bgref
 		// use "debugger;" to check your work
-		gameBoard.style.backgroundImage = `url(images/backGround${this.dataset.bgref}.jpg)`
+		gameBoard.style.backgroundImage = `url(images/backGround${this.dataset.bgref}.jpg)`;
 
 		// loop through all the small draggable images and change their src attributes
 		puzzlePaths.forEach((img, index) => {
@@ -41,6 +42,9 @@
 		// this turns off default browser behaviour
 		event.preventDefault();
 		console.log("dropped on me!");
+
+		if (this.childElementCount == 1) {return; }
+		console.log("there's no space here!")
 		// retrieve the data we got on the drag
 		let droppedEl = event.dataTransfer.getData("currentItem");
 		console.log(droppedEl);
